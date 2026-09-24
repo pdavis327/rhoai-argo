@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/redhat-ai-americas/rhoai-argo.git
+    repoURL: https://github.com/pdavis327/rhoai-argo.git
     path: argocd-applications
     targetRevision: main
     helm:

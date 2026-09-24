@@ -12,7 +12,7 @@ spec:
     namespace: openshift-gitops
   source:
     path: helm/workload-scaling
-    repoURL: https://github.com/redhat-ai-americas/rhoai-argo.git
+    repoURL: https://github.com/pdavis327/rhoai-argo.git
     targetRevision: main
     helm:
       valuesObject:
