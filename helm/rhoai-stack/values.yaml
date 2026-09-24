@@ -57,8 +57,35 @@ userGroups:
   - system:authenticated
 
 dashboardConfig:
+  agentConfigManagement: true
+  agentOps: true
+  agentsCatalog: true
+  aiAssetCustomEndpoints: true
+  automl: true
+  autorag: true
+  connectionTest: true
+  deploymentWizardYAMLViewer: true
+  enablement: true
+  externalModels: true
+  externalVectorStores: true
+  featureStoreAdmin: true
   genAiStudio: true
+  genAiTracing: true
+  globalProjectPrompts: true
+  gpuaas: true
+  guardrails: true
+  llmGatewayField: true
+  llmdTemplates: true
+  mcpCatalog: true
+  mcpRegistry: true
   modelAsService: true
+  observabilityDashboard: true
+  projectRBAC: true
+  promptManagement: true
+  roleManagement: true
+  toolCalling: true
+  trainingJobs: true
+  vLLMDeploymentOnMaaS: true
 
 defaultWorkbenchPvcSize: 20Gi
 showJupyterInEnabledApplications: true
