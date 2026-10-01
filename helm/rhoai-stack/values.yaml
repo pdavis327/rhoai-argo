@@ -56,10 +56,11 @@ dataScienceCluster:
       managementState: Managed
     mlflowoperator:
       managementState: Managed
+    # RHOAI 3.5.1 has no MCPLifecycleOperator/OGX CRDs; Managed leaves DSC NotReady.
     mcplifecycleoperator:
-      managementState: Managed
+      managementState: Removed
     ogx:
-      managementState: Managed
+      managementState: Removed
     trainer:
       managementState: *trainer
     trainingoperator:
