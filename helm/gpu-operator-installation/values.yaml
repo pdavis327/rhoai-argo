@@ -1,4 +1,4 @@
-installPlanApproval: Manual
+installPlanApproval: Automatic
 
 enableRdma: false
 nvidiaGpuChannel: "v25.3"

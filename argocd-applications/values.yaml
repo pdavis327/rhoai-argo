@@ -11,7 +11,7 @@ enableWorkloadScalingApp: true
 
 configuration:
   gpuApp:
-    installPlanApproval: *installPlanApproval
+    installPlanApproval: Automatic
     enableRdma: false
     nvidiaGpuChannel: "v25.3"
     nvidiaGpuVersion: 'gpu-operator-certified.v25.3.0'
