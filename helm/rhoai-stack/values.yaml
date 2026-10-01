@@ -18,7 +18,7 @@ dataScienceCluster:
     kserve:
       managementState: Managed
       modelsAsService:
-        managementState: Managed
+        managementState: Removed
       nim:
         managementState: Managed
       rawDeploymentServiceConfig: Headless
