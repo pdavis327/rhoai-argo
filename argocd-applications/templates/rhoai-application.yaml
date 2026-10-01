@@ -14,9 +14,11 @@ spec:
     path: helm/rhoai-stack
     repoURL: https://github.com/pdavis327/rhoai-argo.git
     targetRevision: main
+    {{- with .Values.configuration.RhoaiApp }}
     helm:
       valuesObject:
-        {{- .Values.configuration.RhoaiApp | toYaml | nindent 8 }}
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
   project: default
   syncPolicy:
     automated:

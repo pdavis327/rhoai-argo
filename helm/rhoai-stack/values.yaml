@@ -18,10 +18,14 @@ dataScienceCluster:
     kserve:
       managementState: Managed
       modelsAsService:
-        managementState: Managed
+        managementState: Removed
       nim:
         managementState: Managed
-      rawDeploymentServiceConfig: Headed
+      rawDeploymentServiceConfig: Headless
+    aigateway:
+      managementState: Managed
+      modelsAsAService:
+        managementState: Managed
     modelregistry:
       managementState: Managed
       registriesNamespace: rhoai-model-registries
@@ -29,6 +33,11 @@ dataScienceCluster:
       managementState: Managed
     trustyai:
       managementState: Managed
+      mcpGuardrailsMode: false
+      eval:
+        lmeval:
+          permitOnline: allow
+          permitCodeExecution: allow
     aipipelines:
       managementState: Managed
       argoWorkflowsControllers:
@@ -36,6 +45,7 @@ dataScienceCluster:
     ray:
       managementState: Managed
     kueue:
+      autoCreateQueues: false
       defaultClusterQueueName: default
       defaultLocalQueueName: default
       managementState: *kueue
@@ -46,10 +56,14 @@ dataScienceCluster:
       managementState: Managed
     mlflowoperator:
       managementState: Managed
+    mcplifecycleoperator:
+      managementState: Managed
+    ogx:
+      managementState: Managed
     trainer:
       managementState: *trainer
     trainingoperator:
-      managementState: Removed
+      managementState: Managed
     llamastackoperator:
       managementState: Managed
 
