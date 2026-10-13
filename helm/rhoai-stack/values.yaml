@@ -56,9 +56,13 @@ dataScienceCluster:
       managementState: Managed
     mlflowoperator:
       managementState: Managed
-    # RHOAI 3.5.1 has no MCPLifecycleOperator/OGX CRDs; Managed leaves DSC NotReady.
     mcplifecycleoperator:
-      managementState: Removed
+      # Confirmed on 3.5.1 (2026-10-13): Managed installs mcpservers.mcp.x-k8s.io
+      # and mcplifecycleoperators.components.platform.opendatahub.io CRDs, the
+      # controller comes up Ready, and the dashboard's MCP Servers page works.
+      managementState: Managed
+    # OGX CRDs are not confirmed on 3.5.1 yet; leaving Removed to avoid
+    # DSC NotReady until it's verified the same way mcplifecycleoperator was.
     ogx:
       managementState: Removed
     trainer:
