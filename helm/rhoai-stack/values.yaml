@@ -64,7 +64,7 @@ dataScienceCluster:
     # OGX CRDs are not confirmed on 3.5.1 yet; leaving Removed to avoid
     # DSC NotReady until it's verified the same way mcplifecycleoperator was.
     ogx:
-      managementState: Removed
+      managementState: Managed
     trainer:
       managementState: *trainer
     trainingoperator:
