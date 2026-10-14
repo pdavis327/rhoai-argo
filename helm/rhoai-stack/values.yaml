@@ -61,10 +61,11 @@ dataScienceCluster:
       # and mcplifecycleoperators.components.platform.opendatahub.io CRDs, the
       # controller comes up Ready, and the dashboard's MCP Servers page works.
       managementState: Managed
-    # OGX CRDs are not confirmed on 3.5.1 yet; leaving Removed to avoid
-    # DSC NotReady until it's verified the same way mcplifecycleoperator was.
+    # OGX component CRD (ogx.components.platform.opendatahub.io) does not
+    # exist in RHOAI 3.5.1.  Setting Managed causes DSC NotReady with
+    # "no matches for kind OGX".  Must stay Removed.
     ogx:
-      managementState: Managed
+      managementState: Removed
     trainer:
       managementState: *trainer
     trainingoperator:
